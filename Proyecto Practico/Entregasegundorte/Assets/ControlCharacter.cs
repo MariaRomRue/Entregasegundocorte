@@ -5,6 +5,7 @@ using UnityEngine;
 public class ControlCharacter : MonoBehaviour { 
 
     public GameObject characterPrincipal;
+    public float velocidad = 20f; 
     // Start is called before the first frame update
     void Start(){
         
@@ -21,11 +22,13 @@ public class ControlCharacter : MonoBehaviour {
         }
         //Cuando presione La tecla RIGHT
         if (Input.GetKey(KeyCode.RightArrow)) {
-            transform.position += Vector3.right * Time.deltaTime;
+            //transform.position += Vector3.right * Time.deltaTime;
+            transform.eulerAngles += new Vector3(0, velocidad * Time.deltaTime, 0);
         }
         //Cuando presione La tecla LEFT
         if (Input.GetKey(KeyCode.LeftArrow)) {
-            transform.position -= Vector3.right * Time.deltaTime;
+            //transform.position -= Vector3.right * Time.deltaTime;
+            transform.eulerAngles -= new Vector3(0, velocidad * Time.deltaTime, 0);
         }
      
     }
