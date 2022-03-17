@@ -11,8 +11,14 @@ public class ControlCharacter : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+    void Update() {
+        //transform.position += Vector3.forward * Time.deltaTime;
+        if (Input.GetKey(KeyCode.UpArrow)){
+            transform.position += Vector3.forward * Time.deltaTime;
+        }
+
+        //Cuando presione la tecla DOWN el carro avanza hacia atras o en reversa
+        if (Input.GetKey(KeyCode.DownArrow)){
+            transform.position -= Vector3.forward * Time.deltaTime;
+        }
+        //Cuando presione la tecla RIGHT
