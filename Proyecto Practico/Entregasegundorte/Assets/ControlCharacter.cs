@@ -11,17 +11,20 @@ public class ControlCharacter : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         //transform.position += Vector3.forward * Time.deltaTime;
-        if (Input.GetKey(KeyCode.UpArrow)){
+        if (Input.GetKey(KeyCode.UpArrow)) {
             transform.position += Vector3.forward * Time.deltaTime;
         }
-        //Cuando presione la tecla DOWN el carro avanza hacia atras o en reversa
-        if (Input.GetKey(KeyCode.DownArrow)){
+        //Cuando presione La tecla DOWN el carro avanza hacia atras o en reversa
+        if (Input.GetKey(KeyCode.DownArrow)) {
             transform.position -= Vector3.forward * Time.deltaTime;
         }
-        //Cuando presione la tecla RIGHT
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
+        //Cuando presione La tecla RIGHT
+        if (Input.GetKey(KeyCode.RightArrow)) {
             transform.position += Vector3.right * Time.deltaTime;
+        }
+        //Cuando presione La tecla LEFT
+        if (Input.GetKey(KeyCode.LeftArrow)) {
+            transform.position -= Vector3.left * Time.deltaTime;
         }
      
 
